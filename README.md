@@ -1,5 +1,5 @@
 # Heli
-HELI By Phil Hite 2021 Version 1.8
+HELI 1.8 By Phil Hite 2021
 A Freeware Game for the ZX Spectrum 48K/128K
 
 Build the Bridge
