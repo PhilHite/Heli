@@ -1,4 +1,4 @@
-   10 REM HELI 1.92 BY PHIL HITE 2021
+   10 REM HELI 1.94 BY PHIL HITE 2021
    20 FOR g=1 TO 12: READ g$: FOR y=0 TO 7: READ x: POKE USR g$+y,x: NEXT y: NEXT g
    30 DATA "a",255,128,65,34,20,8,255,0
    40 DATA "b",170,85,170,85,170,85,170,85
@@ -16,7 +16,7 @@
   160 REM START
   170 LET t$=" TODAY'S GREATEST": LET g=1
   180 BORDER 0: PAPER 7: INK 1: BRIGHT 0: OVER 0: CLS 
-  190 PRINT TAB 6;"        HELI    1.92"
+  190 PRINT TAB 6;"        HELI    1.94"
   200 PRINT TAB 6;"   PHIL HITE 2021": PRINT 
   210 PRINT TAB 6;"O LEFT      P RIGHT"
   220 PRINT TAB 6;"SPACE PICK UP/DROP"
@@ -52,8 +52,8 @@
   520 LET c=15: LET d=0
   530 RETURN 
   540 REM COPTER
-  550 LET i=INT (RND*8): LET p=INT (RND*8): IF i=7 AND p=7 THEN GO TO 550
-  560 FOR y=12 TO 21: PRINT AT y,0; INK i; PAPER p;"\b\b\b\b\b\b\b\b";AT y,24;"\b\b\b\b\b\b\b\b": NEXT y
+  550 LET i=INT (RND*8): LET p=INT (RND*8): LET b=INT (RND*2): IF i=7 AND p=7 AND b=0 THEN GO TO 550
+  560 FOR y=12 TO 21: PRINT AT y,0; INK i; PAPER p; BRIGHT b;"\b\b\b\b\b\b\b\b";AT y,24;"\b\b\b\b\b\b\b\b": NEXT y
   570 PRINT AT 0,0; PAPER 0;"                                ": PRINT AT 0,0; INK 7; PAPER 0;s;AT 0,14;"L";l;AT 0,24;"HI";h
   580 PRINT AT 11,0; INK 3;"\a\a\a\a\a\a\a\a";AT 11,24;"\a\a\a\a\a\a\a\a"
   590 FOR x=1 TO 32
@@ -128,7 +128,7 @@
  1280 FOR y=n TO b
  1290 PRINT INK 0;AT y,m;"\c"; INK 2;AT y+1,m;"\f"
  1300 IF k=1 THEN PRINT INK 3;AT y+2,m;"\a"
- 1310 IF q=0 THEN FOR x=1 TO 300: NEXT x: GO TO 1330
+ 1310 IF q=0 THEN FOR x=1 TO 400: NEXT x: GO TO 1330
  1320 BEEP .025,-y
  1330 NEXT y
  1340 IF g(ma)=1 AND k=0 THEN LET g(ma)=0: LET k=1: GO TO 1390
@@ -182,9 +182,9 @@
  1820 PRINT AT y,m;" "
  1830 IF y<10 THEN PRINT AT y+1,m; INK 3;"\l";AT y+2,m; INK i;"\k"
  1840 IF y=10 THEN PRINT AT y+1,m; INK 3;"\a"
- 1850 IF q=0 THEN FOR x=1 TO 300: NEXT x: GO TO 1880
+ 1850 IF q=0 THEN FOR x=1 TO 500: NEXT x: GO TO 1880
  1860 BEEP .025,-y+40
  1870 FOR x=1 TO 150: NEXT x
  1880 NEXT y
  1890 LET k=0: LET g(ma)=1
- 1900 RETURN
+ 1900 RETURN 
