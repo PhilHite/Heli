@@ -1,4 +1,4 @@
-HELI By Phil Hite 2021 Version 1.97
+HELI By Phil Hite 2021 Version 1.98
 A Freeware Game for the ZX Spectrum 48K/128K
 
 Build the Bridge
@@ -25,4 +25,4 @@ Thank you to everyone on the World of Spectrum and Spectrum Computing forums for
 https://s3-eu-west-1.amazonaws.com/plhite.web/spectrum/index.html
 phil_hite@hotmail.com
 
-23 August 2023
+24 September 2023
